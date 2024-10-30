@@ -16,9 +16,9 @@
     <div class="language-selector">
       <label for="language-dropdown">Choose Language: </label>
       <select id="language-dropdown">
-        <option value="en">English</option>
+        <option value="en" selected>English</option>
         <option value="es">Spanish</option>
-        <option value="uk" selected>Ukrainian</option>
+        <option value="uk">Ukrainian</option>
         <option value="vi">Vietnamese</option>
       </select>
     </div>
@@ -42,28 +42,29 @@
     <p>User Guide for Physical Machines</p>
 
     <script>
-      // Language switcher logic
-      document.getElementById('language-dropdown').addEventListener('change', function (event) {
-        const selectedLanguage = event.target.value;
-    
-        // Detect the base path (root) dynamically
-        const basePath = 'file:///D:/www/test-crowdin-integration'; //window.location.origin => JFT change this to test on your local machine
-    
-        // Object mapping language codes to their corresponding file paths
-        const languagePaths = {
-          en: `${basePath}/index.html`,      // English
-          es: `${basePath}/es/index.html`,   // Spanish
-          vi: `${basePath}/vi/index.html`,   // Vietnamese
-          uk: `${basePath}/uk/index.html`    // Ukrainian
-        };
-    
-        // Redirect to the corresponding language page if the language exists in the map
-        if (languagePaths[selectedLanguage]) {
-          window.location.href = languagePaths[selectedLanguage];
-        }
-      });
-    </script>
-    
-    
+        // Language switcher logic
+        document.getElementById('language-dropdown').addEventListener('change', function (event) {
+          const selectedLanguage = event.target.value;
+      
+          // Detect the base path (root) dynamically
+          const basePath = 'file:///D:/www/test-crowdin-integration'; //window.location.origin => JFT change this to test on your local machine
+      
+          // Object mapping language codes to their corresponding file paths
+          const languagePaths = {
+            en: `${basePath}/index.html`,      // English
+            es: `${basePath}/es/index.html`,   // Spanish
+            vi: `${basePath}/vi/index.html`,   // Vietnamese
+            uk: `${basePath}/uk/index.html`    // Ukrainian
+          };
+      
+          // Redirect to the corresponding language page if the language exists in the map
+          if (languagePaths[selectedLanguage]) {
+            window.location.href = languagePaths[selectedLanguage];
+          }
+        });
+      </script>
+      
+      
+      
   </body>
 </html>
