@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NAKIVO CENTRO DE AYUDA LOCALIZACIÓN</title>
-    <script src="../localization.js"></script>
     <style>
       .language-selector {
         position: absolute;
@@ -17,8 +16,8 @@
     <div class="language-selector">
       <label for="language-dropdown">Seleccionar Idioma: </label>
       <select id="language-dropdown">
-        <option value="en">Inglés</option>
-        <option value="es" selected>Español</option>
+        <option value="en" selected>Inglés</option>
+        <option value="es">Español</option>
       </select>
     </div>
 
@@ -46,10 +45,10 @@
         .getElementById('language-dropdown')
         .addEventListener('change', function (event) {
           const selectedLanguage = event.target.value;
-          if (selectedLanguage === 'en') {
-            window.location.href = '../index.html';
-          } else if (selectedLanguage === 'es') {
-            window.location.href = 'index.html';
+          if (selectedLanguage === 'es') {
+            window.location.href = 'es/index.html'; // Redirect to Spanish version
+          } else if (selectedLanguage === 'en') {
+            window.location.href = 'index.html'; // Redirect back to English version
           }
         });
     </script>
