@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAKIVO HELP CENTER LOCALIZATION</title>
+    <style>
+      .language-selector {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="language-selector">
+      <label for="language-dropdown">Choose Language: </label>
+      <select id="language-dropdown">
+        <option value="en" selected>English</option>
+        <option value="es">Spanish</option>
+      </select>
+    </div>
+
+    <h1 id="greeting">Test Crowdin</h1>
+    <h2>Help and Support Center</h2>
+    <p id="description">
+      This is a test page for Crowdin with the static html text.
+    </p>
+    <h3>User Guide</h3>
+    <h3>Knowledge Page</h3>
+    <h3>Release Note</h3>
+    <h3>API Reference</h3>
+    <h3>Forum</h3>
+
+    <h4>PDF Guides</h4>
+
+    <p id="pdf-guides">User Guide for VMware</p>
+    <p>User Guide for Hyper-V</p>
+    <p>User Guide for Microsoft 365</p>
+    <p>User Guide for Physical Machines</p>
+
+    <script>
+      // Language switcher logic
+      document
+        .getElementById('language-dropdown')
+        .addEventListener('change', function (event) {
+          const selectedLanguage = event.target.value;
+          if (selectedLanguage === 'es') {
+            window.location.href = 'es/index.html'; // Redirect to Spanish version
+          } else if (selectedLanguage === 'en') {
+            window.location.href = 'index.html'; // Redirect back to English version
+          }
+        });
+    </script>
+  </body>
+</html>

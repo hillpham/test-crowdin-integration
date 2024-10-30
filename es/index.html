@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAKIVO CENTRO DE AYUDA LOCALIZACIÓN</title>
+    <script src="../localization.js"></script>
+    <style>
+      .language-selector {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="language-selector">
+      <label for="language-dropdown">Seleccionar Idioma: </label>
+      <select id="language-dropdown">
+        <option value="en">Inglés</option>
+        <option value="es" selected>Español</option>
+      </select>
+    </div>
+
+    <h1 id="greeting">Prueba de Crowdin</h1>
+    <h2>Centro de Ayuda y Soporte</h2>
+    <p id="description">
+      Esta es una página de prueba para Crowdin con texto HTML estático.
+    </p>
+    <h3>Guía del Usuario</h3>
+    <h3>Página de Conocimiento</h3>
+    <h3>Notas de la Versión</h3>
+    <h3>Referencia API</h3>
+    <h3>Foro</h3>
+
+    <h4>Guías en PDF</h4>
+
+    <p id="pdf-guides">Guía del Usuario para VMware</p>
+    <p>Guía del Usuario para Hyper-V</p>
+    <p>Guía del Usuario para Microsoft 365</p>
+    <p>Guía del Usuario para Máquinas Físicas</p>
+
+    <script>
+      // Language switcher logic
+      document
+        .getElementById('language-dropdown')
+        .addEventListener('change', function (event) {
+          const selectedLanguage = event.target.value;
+          if (selectedLanguage === 'en') {
+            window.location.href = '../index.html';
+          } else if (selectedLanguage === 'es') {
+            window.location.href = 'index.html';
+          }
+        });
+    </script>
+  </body>
+</html>
